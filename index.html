@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VORTEX // Arquivos Ocultos</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#101419;color:#aeb7c2;font-family:Arial,Helvetica,sans-serif;font-size:13px;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);background-size:4px 4px,4px 4px}
+a{color:#7da8d8;text-decoration:none}a:hover{color:#b7d5f2}
+.top{height:88px;background:#171c22;border-bottom:1px solid #30363e;display:flex;align-items:center;padding:0 24px;box-shadow:0 2px 12px #000}
+.logo{font-size:34px;letter-spacing:5px;color:#d7e0eb;font-weight:bold;text-shadow:0 0 8px #536d88}.logo span{color:#5f92bd}
+.nav{background:#20262e;border-bottom:1px solid #080a0d;min-height:38px;display:flex;align-items:center;padding-left:8px;gap:3px}.nav a{display:inline-block;padding:10px 15px;color:#879bb0;border-right:1px solid #30363e}.nav a.active,.nav a:hover{background:#29313b;color:#e0e8ef}
+.wrap{max-width:1250px;margin:auto}.breadcrumb{height:38px;background:#1a2027;border-bottom:1px solid #30363e;padding:11px 14px;color:#718196;font-size:12px}
+.layout{display:grid;grid-template-columns:185px 1fr;gap:10px;padding:10px}.side,.post,.notice,.story-card{background:#1b2129;border:1px solid #303740;box-shadow:0 1px 5px #050607}.side h3,.boxhead{margin:0;padding:10px 12px;background:#222a33;border-bottom:1px solid #343c45;color:#b9c8d8;font-size:13px}.side a{display:block;padding:9px 12px;border-bottom:1px solid #282e35;color:#8499ae}.side a:hover,.side a.active{background:#242c35;color:#d6e1eb}.status{padding:12px;color:#687887;font-size:11px;line-height:1.7}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#687d91;margin-right:5px}
+.topicbar{background:#202730;border:1px solid #303740;padding:12px 14px;color:#bfcbd7;font-size:18px}.topicbar small{display:block;color:#657486;font-size:11px;margin-top:5px}
+.post{margin-top:10px;display:grid;grid-template-columns:150px 1fr}.user{border-right:1px solid #303740;background:#181e25;padding:12px;color:#72879b}.user .avatar{width:76px;height:76px;border:1px solid #394653;margin-bottom:9px;display:flex;align-items:center;justify-content:center;color:#445769;background:#0d1115;font-size:10px;letter-spacing:1px}.user strong{display:block;color:#c2d0dc;margin-bottom:4px}.content{padding:0}.posthead{padding:8px 12px;background:#202730;border-bottom:1px solid #303740;color:#667789;font-size:11px}.text{padding:18px 20px;color:#aeb7c2;line-height:1.75}.text h1{margin:0 0 5px;color:#d9e2ea;font-size:25px;font-weight:normal}.text h2{font-size:15px;color:#9fb4c9;margin-top:28px}
+.quote{border-left:3px solid #4d6479;background:#151a20;padding:13px 15px;color:#8998a7;font-style:italic;margin:20px 0}.poem{background:#11161b;border:1px solid #2c343c;padding:18px 22px;color:#9ca9b6;font-family:Georgia,serif;line-height:2;font-style:italic}.warning{margin-top:18px;padding:10px 12px;background:#211e20;border:1px solid #4a383d;color:#a88e95;font-size:11px}
+.comments{margin-top:10px}.comment{display:grid;grid-template-columns:120px 1fr;border-top:1px solid #303740}.comment:first-child{border-top:0}.comment-user{background:#181e25;border-right:1px solid #303740;padding:12px;color:#71869a;font-size:11px}.comment-user strong{display:block;color:#b9c8d8;margin-bottom:4px}.comment-body{padding:12px 15px;background:#1b2129;color:#9daab6;line-height:1.6}.comment-head{font-size:10px;color:#5f7182;margin-bottom:7px}.comment mark{background:#222c35;color:#c0ceda;padding:1px 4px}
+.panel{display:none}.panel.active{display:block}.archive-head{background:#202730;border:1px solid #303740;padding:14px;color:#bcc9d5;font-size:17px}.archive-head small{display:block;font-size:11px;color:#68798a;margin-top:4px}.story-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.story-card{padding:0}.story-card .story-top{padding:12px;background:#202730;border-bottom:1px solid #303740}.story-card .story-top strong{color:#c8d4df}.story-card .story-top span{float:right;color:#596a7a;font-size:10px}.story-card .story-text{padding:15px;line-height:1.7;color:#9eabb7}.story-card .story-text p{margin-top:0}.story-card .mini-poem{border-left:2px solid #4d6479;padding-left:12px;color:#8898a8;font-family:Georgia,serif;font-style:italic}.classified{margin-top:10px;background:#161b21;border:1px dashed #394653;padding:12px;color:#778797;font-size:11px}.classified b{color:#9caebe}
+.footer{text-align:center;color:#4f5d6b;font-size:10px;padding:28px;letter-spacing:1px}
+@media(max-width:800px){.story-list{grid-template-columns:1fr}}@media(max-width:700px){.layout{grid-template-columns:1fr}.side{display:none}.post{grid-template-columns:1fr}.user{border-right:0;border-bottom:1px solid #303740}.comment{grid-template-columns:1fr}.comment-user{border-right:0;border-bottom:1px solid #303740}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="width:100%"><div class="logo"><span>V</span>ORTEX</div></div></header>
+<nav class="nav"><div class="wrap" style="width:100%">
+ <a href="#retoriam" data-tab="retoriam" class="active">☰ Fóruns</a><a href="#contos" data-tab="contos">Arquivo</a><a href="#relatos" data-tab="relatos">Relatos</a><a href="#sobre" data-tab="sobre">Mensagens</a><a href="#pesquisa" data-tab="pesquisa">Pesquisar</a>
+</div></nav>
+<div class="wrap">
+ <div class="breadcrumb">⌂ Índice do fórum &gt; <span id="crumb">Arquivos &gt; Relatos &gt; <b>Retoriam</b></span></div>
+ <div class="layout">
+  <aside class="side">
+   <h3>NAVEGAÇÃO</h3>
+   <a href="#retoriam" data-tab="retoriam" class="active">Retoriam</a>
+   <a href="#contos" data-tab="contos">Contos</a>
+   <a href="#relatos" data-tab="relatos">Relatos encontrados</a>
+   <a href="#sobre" data-tab="sobre">Mensagens</a>
+   <a href="#pesquisa" data-tab="pesquisa">Pesquisar</a>
+   <div class="status"><span class="dot"></span>Arquivo conectado<br><span class="dot"></span>Registro: RTM-019<br><span class="dot"></span>Origem: desconhecida</div>
+  </aside>
+
+  <main>
+   <section id="retoriam" class="panel active">
+    <div class="topicbar">O Conto do Retoriam<small>Relato arquivado por um usuário anônimo · Última atualização: desconhecida</small></div>
+    <article class="post">
+     <div class="user"><div class="avatar">ANÔNIMO<br>///</div><strong>observador_0</strong>Usuário não identificado<br><br>Mensagens: 17<br>Registro: oculto</div>
+     <div class="content"><div class="posthead">Post #1 · 03:17 · arquivo recuperado</div><div class="text">
+      <h1>Retoriam</h1><p><i>Uma maldição que utiliza almas vingativas como receptáculo.</i></p>
+      <p>Eu ouvi essa história pela primeira vez de alguém que jurava nunca ter contado aquilo antes. O estranho é que, quando terminou, perguntou se já havia contado.</p>
+      <p>O conto fala sobre o <b>Retoriam</b>, uma maldição capaz de aprisionar uma região em um ciclo temporal. Quando é invocada, todos os dias passam a se repetir exatamente da mesma maneira, como se o tempo fosse incapaz de avançar.</p>
+      <p>As mesmas pessoas acordam. As mesmas conversas acontecem. Os mesmos passos percorrem as mesmas ruas. Até os acontecimentos mais insignificantes retornam ao seu lugar.</p>
+      <p>E ninguém percebe.</p>
+      <div class="quote">“O Retoriam não caça aqueles que aceitam o ciclo. Ele caça apenas aqueles que tentam fugir.”</div>
+      <p>As almas vingativas que servem de receptáculo permanecem dentro desse ciclo, observando aqueles que eventualmente percebem a repetição. Quanto mais alguém tenta compreender a maldição, quebrar o ciclo ou escapar dele, mais a presença do Retoriam se manifesta.</p>
+      <p>Dizem que os primeiros sinais são pequenos: uma conversa que parece familiar, um relógio marcando a mesma hora, alguém repetindo exatamente a mesma frase.</p>
+      <p>Depois vem a certeza de que aquilo já aconteceu.</p>
+      <p>Quando alguém tenta fugir, porém, o conto muda. A região parece se voltar contra essa pessoa. Portas que deveriam estar abertas estão fechadas. Pessoas aparecem onde não deveriam estar. E acontecimentos que nunca deveriam acontecer começam a se repetir.</p>
+      <p>Para todos os outros, nada está errado.</p><p>Para quem percebeu, o dia nunca termina.</p>
+      <h2>O Estribilho Eterno</h2><div class="poem">O sino toca, o dia começa,<br>mas algo morreu na noite que passa.<br><br>Rostos sorriem, sem recordar,<br>que já morreram antes de acordar.<br><br>O sol se põe.<br>O sino outra vez.<br><br>E ninguém percebe.</div>
+      <div class="warning">NOTA DO ARQUIVO: Há relatos de que pessoas que leram este conto mais de uma vez afirmaram reconhecer trechos antes de chegar até eles.</div>
+     </div></div>
+    </article>
+
+    <div class="comments post">
+     <div class="boxhead" style="grid-column:1/-1">RESPOSTAS AO TÓPICO · 10 mensagens encontradas</div>
+     <div class="comment"><div class="comment-user"><strong>mira_13</strong>Mensagens: 3<br>Registro: 2024</div><div class="comment-body"><div class="comment-head">#2 · 03:41</div>Alguém sabe de onde veio esse relato? Procurei por <mark>Retoriam</mark> e não encontrei nada parecido. Talvez seja só uma história inventada, mas a parte do sino ficou na minha cabeça.</div></div>
+     <div class="comment"><div class="comment-user"><strong>sem_nome</strong>Mensagens: 1<br>Registro: oculto</div><div class="comment-body"><div class="comment-head">#3 · 04:02</div>Eu já li isso antes. Tenho certeza. Não lembro onde, mas o último parágrafo estava diferente da primeira vez.</div></div>
+     <div class="comment"><div class="comment-user"><strong>arquivo_17</strong>Mensagens: 8<br>Registro: 2021</div><div class="comment-body"><div class="comment-head">#4 · 04:16</div>Não tentem procurar a origem pelo nome. Procurem pela frase sobre o sino. Existem três relatos com frases quase iguais em idiomas diferentes.</div></div>
+     <div class="comment"><div class="comment-user"><strong>leste_404</strong>Mensagens: 2<br>Registro: 2025</div><div class="comment-body"><div class="comment-head">#5 · 04:19</div>Se vocês encontrarem os outros relatos, <b>não respondam neste tópico.</b> O administrador apagou minha mensagem anterior depois que eu disse isso.</div></div>
+     <div class="comment"><div class="comment-user"><strong>lia_noite</strong>Mensagens: 5<br>Registro: 2023</div><div class="comment-body"><div class="comment-head">#6 · 04:23</div>Li o conto três vezes. Na terceira, a estrofe do sino já estava na minha cabeça antes de eu chegar nela. Alguém mais sentiu isso?</div></div>
+     <div class="comment"><div class="comment-user"><strong>mira_13</strong>Mensagens: 3<br>Registro: 2024</div><div class="comment-body"><div class="comment-head">#7 · 04:31</div>Fui atrás da frase do sino, como o <mark>arquivo_17</mark> sugeriu. Achei dois dos três relatos. Um deles não termina com poema. Termina com uma instrução.</div></div>
+     <div class="comment"><div class="comment-user"><strong>arquivo_17</strong>Mensagens: 8<br>Registro: 2021</div><div class="comment-body"><div class="comment-head">#8 · 04:38</div>Eu vi. Não é instrução de fuga, é de <b>selamento</b>. Faz sentido: se o Retoriam não caça quem aceita o ciclo, a saída não pode ser correr.</div></div>
+     <div class="comment"><div class="comment-user"><strong>ultimo_toque</strong>Mensagens: 1<br>Registro: oculto</div><div class="comment-body"><div class="comment-head">#9 · 04:52</div>Encontrei a forma de selar a maldição e a cantiga que acompanha o ritual. Está em outro lugar, porque aqui costumam apagar.<br><br>➜ <a href="https://funckingbizzarreshortstories-rgb.github.io/-/" target="_blank" rel="noopener">rtm019_selo.onion/estribilho</a><br><br>Leiam até o fim antes de tentar qualquer coisa. E não leiam a cantiga em voz alta na primeira vez.</div></div>
+     <div class="comment"><div class="comment-user"><strong>leste_404</strong>Mensagens: 2<br>Registro: 2025</div><div class="comment-body"><div class="comment-head">#10 · 04:58</div>Esse link não abria ontem. Hoje abriu. Não sei se isso é bom.</div></div>
+     <div class="comment"><div class="comment-user"><strong>sem_nome</strong>Mensagens: 1<br>Registro: oculto</div><div class="comment-body"><div class="comment-head">#11 · 05:03</div>Esse comentário do <mark>ultimo_toque</mark> já estava aqui na primeira vez que li este tópico. No mesmo horário. Eu só não tinha coragem de clicar.</div></div>
+    </div>
+   </section>
+
+   <section id="contos" class="panel">
+    <div class="archive-head">ARQUIVO // CONTOS DE OUTRAS REGIÕES<small>Registros enviados por usuários. Algumas localidades e relatos podem não ser verificáveis.</small></div>
+    <div class="story-list">
+     <article class="story-card"><div class="story-top"><strong>O Quarto que Respira</strong><span>JAPÃO · JP-044</span></div><div class="story-text"><p>Em um prédio antigo de Sapporo, existe um quarto que não aparece nas plantas. Quem encontra a porta percebe que o corredor parece um pouco mais comprido a cada visita.</p><p>O detalhe estranho é que o quarto nunca está vazio. Há sempre uma cadeira diante da janela, como se alguém estivesse esperando o visitante.</p><div class="mini-poem">“Quando a janela fechar, não abra a porta.<br>O quarto já sabe que você chegou.”</div></div></article>
+     <article class="story-card"><div class="story-top"><strong>A Casa Sem Sombra</strong><span>ROMÊNIA · RO-011</span></div><div class="story-text"><p>Em uma vila nas montanhas, moradores falam de uma casa que permanece iluminada mesmo quando todas as outras ficam escuras.</p><p>Ninguém vê quem mora ali. De manhã, porém, uma nova fotografia aparece na janela. Em cada fotografia existe a vila exatamente como está naquele momento.</p><div class="mini-poem">“Se sua janela aparecer na fotografia,<br>não olhe para trás.”</div></div></article>
+     <article class="story-card"><div class="story-top"><strong>A Janela de San Cristóbal</strong><span>MÉXICO · MX-208</span></div><div class="story-text"><p>Um relato antigo descreve uma janela azul que surge em paredes onde antes não havia nenhuma abertura. Ela mostra uma rua completamente diferente da rua do lado de fora.</p><p>Quem observa por tempo suficiente vê pessoas passando. Algumas parecem perceber que estão sendo observadas.</p><div class="mini-poem">“A rua do outro lado não leva a lugar algum.<br>Ela só espera alguém atravessar.”</div></div></article>
+     <article class="story-card"><div class="story-top"><strong>O Sino de Black Isle</strong><span>ESCÓCIA · SC-073</span></div><div class="story-text"><p>Nas proximidades de uma pequena vila costeira, pescadores contam sobre um sino que pode ser ouvido em noites de neblina, embora a antiga torre tenha sido demolida há décadas.</p><p>O sino toca sempre três vezes. Depois do terceiro toque, qualquer pessoa que esteja olhando para o mar encontra uma luz distante onde não deveria existir nenhuma.</p><div class="mini-poem">“Primeiro toque: fique em terra.<br>Segundo: apague a luz.<br>Terceiro: não responda.”</div></div></article>
+    </div>
+    <div class="classified"><b>NOTA:</b> Os quatro contos acima são registros ficcionais do arquivo VORTEX. Alguns detalhes foram deliberadamente deixados sem origem para manter a natureza duvidosa dos relatos.</div>
+   </section>
+
+   <section id="relatos" class="panel">
+    <div class="archive-head">RELATOS ENCONTRADOS<small>Fragmentos recuperados de tópicos pequenos e pouco acessados.</small></div>
+    <article class="post"><div class="user"><div class="avatar">ARQ<br>///</div><strong>arquivo_17</strong>Mensagens: 8<br>Registro: 2021</div><div class="content"><div class="posthead">Post #1 · origem desconhecida</div><div class="text"><h1>Sobre os quatro registros</h1><p>Não sei se os contos têm alguma ligação. O que me chamou atenção foi a repetição de três elementos: <b>janelas, sinos e pessoas que percebem algo antes dos outros.</b></p><p>Talvez seja apenas coincidência. Talvez os usuários estejam copiando uns aos outros.</p><div class="quote">“Ou talvez o arquivo esteja organizando os relatos por um motivo que ainda não entendemos.”</div><p>Depois desta mensagem, o tópico original ficou indisponível.</p></div></div></article>
+   </section>
+
+   <section id="sobre" class="panel">
+    <div class="archive-head">MENSAGENS // CAIXA PÚBLICA<small>Não é possível saber quais mensagens foram removidas.</small></div>
+    <div class="post"><div class="user"><div class="avatar">VTX<br>///</div><strong>moderador</strong>Mensagens: 41<br>Registro: desconhecido</div><div class="content"><div class="posthead">Aviso fixado · sem data</div><div class="text"><p>O VORTEX não confirma a existência dos relatos publicados aqui.</p><p>Não enviem informações pessoais. Não tentem localizar pessoas mencionadas nos textos. O objetivo deste arquivo é preservar histórias e registros fictícios.</p><p>Se um tópico desaparecer, isso não significa necessariamente que ele foi apagado pela administração.</p><div class="warning">AVISO: O sistema de mensagens encontra-se parcialmente desativado.</div></div></div></div>
+   </section>
+
+   <section id="pesquisa" class="panel">
+    <div class="archive-head">PESQUISA<small>Banco de termos do arquivo.</small></div>
+    <div class="post"><div class="content"><div class="text"><h1>Pesquisar no VORTEX</h1><p>Digite um termo para consultar os registros disponíveis.</p><form onsubmit="return searchSite(event)"><input id="searchInput" type="text" placeholder="ex.: sino, janela, RTM-019" style="width:70%;padding:10px;background:#101419;border:1px solid #394653;color:#b9c8d8"><button style="padding:10px 14px;background:#29313b;border:1px solid #435363;color:#c7d4df;cursor:pointer">Pesquisar</button></form><div id="searchResult" style="margin-top:15px;color:#7f909f"></div></div></div></div>
+   </section>
+  </main>
+ </div>
+ <div class="footer">VORTEX // ARQUIVO NÃO CATALOGADO // RTM-019 // alguns registros foram removidos</div>
+</div>
+<script>
+const panels=[...document.querySelectorAll('.panel')];
+const links=[...document.querySelectorAll('[data-tab]')];
+const crumbs={retoriam:'Arquivos &gt; Relatos &gt; <b>Retoriam</b>',contos:'Arquivo &gt; Contos &gt; Registros estrangeiros',relatos:'Arquivo &gt; Relatos encontrados',sobre:'Arquivo &gt; Mensagens',pesquisa:'Arquivo &gt; Pesquisa'};
+function showTab(id){panels.forEach(p=>p.classList.toggle('active',p.id===id));links.forEach(a=>a.classList.toggle('active',a.dataset.tab===id));document.getElementById('crumb').innerHTML=crumbs[id]||crumbs.retoriam;history.replaceState(null,'','#'+id);window.scrollTo({top:0,behavior:'smooth'});}
+links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showTab(a.dataset.tab)}));
+function openHash(){const id=location.hash.slice(1);showTab(document.getElementById(id)?id:'retoriam')}
+window.addEventListener('load',openHash);window.addEventListener('hashchange',openHash);
+function searchSite(e){e.preventDefault();const q=document.getElementById('searchInput').value.trim().toLowerCase();const r=document.getElementById('searchResult');if(!q){r.textContent='Nenhum termo informado.';return false}const hits={sino:'RTM-019 · O Estribilho Eterno · O Sino de Black Isle',janela:'A Janela de San Cristóbal · O Quarto que Respira',rtm:'RTM-019 · O Conto do Retoriam',retoriam:'RTM-019 · O Conto do Retoriam'};r.innerHTML=hits[q]||'Nenhum registro correspondente encontrado. <span style="color:#586b7d">Talvez o arquivo ainda não tenha sido catalogado.</span>';return false}
+</script>
+</body>
+</html>
